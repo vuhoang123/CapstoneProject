@@ -1,0 +1,210 @@
+@import "../theme/mixins";
+@import "../theme/variables";
+@import "../layouts/header";
+@import "../layouts/footer";
+@import "../common/base";
+
+.contact {
+    .container {
+        padding: 5rem;
+        h4 {
+            color: $secondary-color;
+            font-weight: 500;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        p {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #000;
+            font-weight: 600;
+            text-align: center;
+        }
+        .main {
+            margin-top: 4rem;
+            display: flex;
+            flex-wrap: nowrap;
+            .form {
+                width: 65%;
+                .flex {
+                    display: flex;
+                    input:first-child {
+                        margin-right: 1rem;
+                    }
+                }
+                input {
+                    width: 100%;
+                    padding: 18px 16px;
+                    margin-bottom: 1rem;
+                    background: $bg-light;
+                    border: $bg-light;
+                    border-radius: 6px;
+                }
+                input:focus {
+                    outline: 1px solid $border-hover;
+                }
+                textarea {
+                    padding: 18px 16px;
+                    width: 100%;
+                    min-height: 140px;
+                    background: $bg-light;
+                    border: $bg-light;
+                    border-radius: 6px;
+                    resize: none;
+                    margin-bottom: 1rem;
+                }
+                textarea:focus {
+                    outline: 1px solid $border-hover;
+                }
+                button {
+                    color: #fff;
+                    background-color: #189a46;
+                    border-radius: 8px;
+                    -webkit-transition: all 0.5s;
+                    transition: all 0.5s;
+                    border: none;
+                    margin-left: 1rem;
+                    padding: 1rem 2rem;
+                    font-size: 17px;
+                    cursor: pointer;
+                    float: right;
+                }
+                button:hover {
+                    background-color: $bg-hover;
+                    border: $border-hover;
+                }
+            }
+            .info {
+                width: 35%;
+                padding-left: 1.5rem;
+                .item {
+                    display: flex;
+                    align-items: baseline;
+                    margin-bottom: 1.5rem;
+                    i {
+                        color: $primary-color;
+                        padding: 0px 1.5rem;
+                    }
+                    .text {
+                        h5 {
+                            font-size: 20px;
+                            font-weight: 600;
+                            line-height: 26px;
+                            margin-bottom: 10px;
+                        }
+                        span {
+                            color: $para-color;
+                            line-height: 23px;
+                        }
+                        p {
+                            text-align: left;
+                            font-size: 15px;
+                            color: $para-color;
+                            font-weight: 400;
+                            margin-top: 0px;
+                            margin-bottom: 0;
+                            cursor: pointer;
+                            a {
+                                text-decoration: none;
+                                color: $para-color;
+                            }
+                        }
+                        p:hover a {
+                            color: $primary-color;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.map {
+    iframe {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: $large-screen) {
+    .contact {
+        .container {
+            padding: 4rem 15px;
+            p {
+                font-size: 2.2rem;
+            }
+            .main {
+                flex-wrap: wrap;
+                .form {
+                    width: 65%;
+                }
+                .info {
+                    padding-left: 1.5rem;
+                    width: 35%;
+                    .item {
+                        i {
+                            padding: 0px 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $laptop) {
+    .contact {
+        .container {
+            padding: 3rem 15px;
+            p {
+                font-size: 2.2rem;
+            }
+            .main {
+                flex-wrap: wrap;
+                .form {
+                    width: 65%;
+                }
+                .info {
+                    padding-left: 1.5rem;
+                    width: 35%;
+                    .item {
+                        i {
+                            padding: 0px 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .contact {
+        .container {
+            padding: 3rem 15px;
+            p {
+                font-size: 2rem;
+            }
+            .main {
+                flex-wrap: wrap;
+                .form {
+                    width: 100%;
+                }
+                .info {
+                    margin-top: 2rem;
+                    padding-left: 0;
+                    width: 100%;
+                    .item {
+                        i {
+                            padding: 0 1.5rem 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

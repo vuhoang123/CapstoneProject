@@ -1,6 +1,18 @@
-$c1-100: #189A46;
-$c1-200:#f53626;
-
+// $c1-100: #189A46;
+// $c1-200:#f53626;
+$primary-color: #189a46;
+$secondary-color: #f53626;
+$font-color: #696969;
+$bg-light: rgba(147, 107, 232, 0.05);
+$bg-hover: #116e32;
+$border-hover: #116e32;
+$para-color: #696969;
+$border-light: #f0f3f0;
+$mobile: 576px;
+$mobile-flip: 768px;
+$tablet: 992px;
+$laptop: 1200px;
+$large-screen: $laptop+1;
 
 
 $cBlack: #000;

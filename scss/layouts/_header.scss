@@ -1,0 +1,186 @@
+.header {
+    background-color: #fff;
+    position: fixed;
+    top: 2.5rem;
+    width: 100%;
+    z-index: 2020;
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        h1 {
+            color: $primary-color;
+        }
+        .navbar {
+            display: flex;
+            .active {
+                color: $primary-color;
+            }
+            a {
+                margin-left: 1.5rem;
+                text-decoration: none;
+                color: #000;
+                font-size: 1.2em;
+                font-weight: 400;
+                transition: all 0.2s;
+            }
+            .link::after {
+                content: "";
+                width: 0;
+                height: 1px;
+                background-color: $primary-color;
+                transition: all 0.4s;
+                display: block;
+                bottom: 0;
+            }
+            .link:hover::after {
+                width: 100%;
+            }
+            .link:hover {
+                color: $primary-color;
+            }
+        }
+        .nav-bars {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: $large-screen) {
+    .header {
+        .container {
+            padding: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: $laptop) {
+    .header {
+        width: 100%;
+        .container {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .navbar {
+                display: flex;
+            }
+            .nav-bars {
+                display: none;
+                a {
+                    text-decoration: none;
+                    .icon {
+                        color: $font-color;
+                        width: 50px;
+                        font-size: 1.4rem;
+                    }
+                }
+                .bars {
+                    color: #fff;
+                    padding: 0px 8px;
+                    font-size: 24px;
+                    background: $primary-color;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .header {
+        width: 100%;
+        .container {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .navbar {
+                display: none;
+            }
+            .nav-bars {
+                display: block;
+                a {
+                    text-decoration: none;
+                    .icon {
+                        color: $font-color;
+                        width: 50px;
+                        font-size: 1.4rem;
+                    }
+                }
+                .bars {
+                    color: #fff;
+                    padding: 0px 8px;
+                    font-size: 24px;
+                    background: $primary-color;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-flip) {
+    .header {
+        width: 100%;
+        .container {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .navbar {
+                display: none;
+            }
+            .nav-bars {
+                display: block;
+                a {
+                    text-decoration: none;
+                    .icon {
+                        color: $font-color;
+                        width: 50px;
+                        font-size: 1.4rem;
+                    }
+                }
+                .bars {
+                    color: #fff;
+                    padding: 0px 8px;
+                    font-size: 24px;
+                    background: $primary-color;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .header {
+        width: 100%;
+        .container {
+            padding: 15px;
+            h1 {
+                font-size: 1.8rem;
+            }
+            .navbar {
+                display: none;
+            }
+            .nav-bars {
+                display: block;
+                a {
+                    text-decoration: none;
+                    .icon {
+                        color: $font-color;
+                        width: 50px;
+                        font-size: 1.4rem;
+                    }
+                }
+                .bars {
+                    color: #fff;
+                    padding: 0px 8px;
+                    font-size: 24px;
+                    background: $primary-color;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

@@ -66,11 +66,16 @@
 .main {
   padding-top: 16px;
   padding-bottom: 176px;
+  background-color: var(--bg-color);
   .content {
     padding: 80px 0;
     align-items: center;
     border-bottom: 1px solid var(--border-light);
     justify-content: space-between;
+    &.item_4 {
+      border: none;
+      margin-bottom: -80px;
+    }
     img {
       width: 100%;
       border-radius: 10px;

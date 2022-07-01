@@ -1278,7 +1278,30 @@ header.onScroll {
   text-align: center;
 }
 
-.team .container .team__content .team_item img {
+.team .container .team__content .team_item:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  border-radius: 6px;
+}
+
+.team .container .team__content .team_item:hover h5 {
+  color: var(--primary-color);
+}
+
+.team .container .team__content .team_item .image {
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.team .container .team__content .team_item .image img {
   width: 100%;
   border-radius: 10px;
 }
@@ -1292,10 +1315,6 @@ header.onScroll {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   margin-top: 20px;
-}
-
-.team .container .team__content .team_item h5:hover {
-  color: var(--primary-color);
 }
 
 .team .container .team__content .team_item p {
@@ -1318,12 +1337,25 @@ header.onScroll {
   text-align: center;
   background: var(--bg-light);
   color: var(--primary-color);
+  text-decoration: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .team .container .team__content .team_item .social-icon a span {
   font-size: 12px;
   line-height: 30px;
   display: block;
+  color: var(--primary-color);
+}
+
+.team .container .team__content .team_item .social-icon a:hover {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.team .container .team__content .team_item .social-icon a:hover span {
+  color: #fff;
 }
 
 .team .container .team__content .team_item .social-icon a .fa-facebook:before {

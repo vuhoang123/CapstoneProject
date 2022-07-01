@@ -1056,6 +1056,7 @@ header.onScroll {
 .main {
   padding-top: 16px;
   padding-bottom: 176px;
+  background-color: var(--bg-color);
 }
 
 .main .content {
@@ -1067,6 +1068,11 @@ header.onScroll {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.main .content.item_4 {
+  border: none;
+  margin-bottom: -80px;
 }
 
 .main .content img {

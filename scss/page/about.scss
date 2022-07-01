@@ -267,9 +267,24 @@
     .team__content {
       text-align: center;
       .team_item {
-        img {
-          width: 100%;
+        &:hover {
+          img {
+            transform: scale(1.1);
+            transition: transform 0.3s linear;
+            border-radius: 6px;
+          }
+          h5 {
+            color: var(--primary-color);
+          }
+        }
+        .image {
+          overflow: hidden;
           border-radius: 10px;
+          transition: transform 0.3s linear;
+          img {
+            width: 100%;
+            border-radius: 10px;
+          }
         }
         h5 {
           font-size: 22px;
@@ -279,9 +294,6 @@
           cursor: pointer;
           transition: 0.3s ease;
           margin-top: 20px;
-          &:hover {
-            color: var(--primary-color);
-          }
         }
         p {
           font-size: 16px;
@@ -300,15 +312,25 @@
             text-align: center;
             background: var(--bg-light);
             color: var(--primary-color);
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
             span {
               font-size: 12px;
               line-height: 30px;
               display: block;
+              color: var(--primary-color);
+            }
+            &:hover {
+              background: var(--primary-color);
+              border-radius: 4px;
+
+              span {
+                color: #fff;
+              }
             }
             .fa-facebook:before {
               content: "\f09a";
-              color: #189a46
-              ;
+              color: #189a46;
             }
           }
         }

@@ -1,0 +1,204 @@
+@import "../theme/_variables.scss";
+@import "../theme/_mixins.scss";
+@import "../common/_base.scss";
+@import "../layouts/_header.scss";
+@import "../layouts/_footer.scss";
+.banner {
+  margin-top: 96px;
+  background: url(../../img/banner4.jpg) no-repeat center;
+  position: relative;
+  text-align: center;
+  padding-bottom: 48px;
+  z-index: 0;
+  .container {
+    .banner__content {
+      padding: 10px 0;
+      .title {
+        margin-top: 50px;
+        h2 {
+          font-size: 50px;
+          font-weight: 600;
+          color: #fff;
+        }
+      }
+      .text {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        list-style: none;
+        li {
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 1.2rem;
+          line-height: 1.5;
+          font-weight: 400;
+          text-transform: capitalize;
+          color: #fff;
+          a {
+            text-decoration: none;
+            color: #189a46;
+            font-size: 1.2rem;
+          }
+          span {
+            font-size: 12px;
+            vertical-align: 2px;
+            color: #fff;
+          }
+        }
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      min-height: 100%;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      background-color: #0c0c0c;
+      opacity: 0.6;
+    }
+  }
+}
+
+.gallery {
+  background: var(--bg-color);
+  .container {
+    text-align: center;
+    padding: 6rem 0;
+
+    h4 {
+      color: var(--secondary-color);
+      font-weight: 400;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .row {
+      margin-top: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      .col {
+        width: calc(100% / 3);
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+        flex-basis: auto !important;
+        .item {
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+          cursor: pointer;
+          img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+          }
+        }
+        .item::before {
+          content: "";
+          width: 50%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: -100%;
+          background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 100%
+          );
+          transform: skewX(-25deg);
+          transition: all 0.75s;
+        }
+        .item:hover::before {
+          left: 125%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+}
+
+@media screen and (max-width: 720px) {
+}
+
+@media screen and (max-width: 540px) {
+  .gallery {
+    .container {
+      max-width: 540px;
+      padding: 4rem 15px;
+      .row {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        .col {
+          width: 100%;
+          padding: 0;
+          .item {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            img {
+              width: 100%;
+              display: block;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .gallery {
+    .container {
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .gallery {
+    .container {
+      .row {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .gallery {
+    .container {
+      .row {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        .col {
+          width: 100%;
+          padding: 0;
+          .item {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            img {
+              width: 100%;
+              display: block;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

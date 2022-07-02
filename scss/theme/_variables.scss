@@ -1,0 +1,88 @@
+[dark-mode~="on"] {
+  $primary-color: #189a46;
+  $secondary-color: #f53626;
+  $font-color: #afafaf;
+  $bg-color: #151515;
+  $heading-color: #ddd;
+  $border-color: #333;
+  $border-light: #444;
+  $border-radius: 10px;
+  $nav-color: #fff;
+  $bg-light: #222;
+  $dropdown-color: #151515;
+  $iframe-filter: grayscale(100%);
+  $widget-bg: #131617;
+
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --font-color: #{$font-color};
+  --bg-color: #{$bg-color};
+  --heading-color: #{$heading-color};
+  --border-radius: #{$border-radius};
+  --border-color: #{$border-color};
+  --border-light: #{$border-light};
+  --nav-color: #{$nav-color} #292922;
+  --dropdown-color: #{$dropdown-color};
+  --bg-light: #{$bg-light};
+  --iframe-filter: #{$iframe-filter};
+  --widget-bg: #{$widget-bg};
+}
+[dark-mode~="off"] {
+  $primary-color: #189a46;
+  $secondary-color: #f53626;
+  $font-color: #696969;
+  $bg-color: #fff;
+  $heading-color: #000c04;
+  $border-radius: 10px;
+  $border-color: #ddd;
+  $border-light: #f0f3f0;
+  $nav-color: #292922;
+  $dropdown-color: #fff;
+  $bg-light: rgba(147, 107, 232, 0.05);
+  $iframe-filter: grayscale(0%);
+  $widget-bg: #3f3a64;
+
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --font-color: #{$font-color};
+  --bg-color: #{$bg-color};
+  --heading-color: #{$heading-color};
+  --border-radius: #{$border-radius};
+  --border-color: #{$border-color};
+  --border-light: #{$border-light};
+  --nav-color: #{$nav-color} #292922;
+  --dropdown-color: #{$dropdown-color};
+  --bg-light: #{$bg-light};
+  --iframe-filter: #{$iframe-filter};
+  --widget-bg: #{$widget-bg};
+}
+
+$text-xs: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-md: 1.25rem;
+$text-lg: 1.5rem;
+$text-xl: 2rem;
+$text-2xl: 3rem;
+$text-3xl: 4rem;
+$text-4xl: 5rem;
+
+$text-light: 300;
+$text-regular: 400;
+$text-semiBold: 600;
+$text-bold: 700;
+
+//map
+$breakpoint: (
+  "xs": 576px,
+  "sm": 768px,
+  "md": 992px,
+  "lg": 1200px,
+);
+
+@function getBreakPoint($key) {
+  @if (map-has-key($map: $breakpoint, $key: $key)) {
+    @return map-get($breakpoint, $key);
+  }
+  @error "Invalid key!!";
+}
